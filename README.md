@@ -15,4 +15,7 @@ Overall, this program's audio routing capabilities allow users to customize thei
 
 # Config
 
-If you installed VB audio virtual cable, choose 'VB virtual cable audio input' as the playback device in program when prompted in the start
+You need to  use 'Microsoft Edge' and an extension to export the cookie file when the bing chat ai is opened in the browser.
+Copy the contents and Save that file as 'bing_cookie.json'.
+
+If you installed VB audio virtual cable, choose 'VB virtual cable audio input' as the playback device in program when prompted in the start.
