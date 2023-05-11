@@ -1,5 +1,5 @@
 # SpeakBot
-Speakbot is an AI chatbot that allows users to interact with the app using voice input and output. The app uses Bing AI for generating responses, Google TTS for audio output, Google Translate for text translation, and Wit AI for speech recognition.
+Speakbot is an AI chatbot that allows users to interact with the app using voice input and output. The app uses Bing AI with 'Edge GPT' github repo for generating responses, Google TTS for audio output, Google Translate for text translation, and Wit AI for speech recognition.
 
 When the user speaks into the app, the speech is converted into text using Wit AI's speech recognition technology. The text is then translated into English using Google Translate, which is provided as input to the Bing AI, generating a response in English.
 
