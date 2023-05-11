@@ -11,7 +11,7 @@ from EdgeGPT import Chatbot, ConversationStyle
 #tld is accent
 input_lang = 'ja'
 output_lang = 'ja'
-tld_for_tts = 'us'
+#tld_for_tts = 'us'
 
 if input_lang == 'en' :
     wit_api_key = 'RAWZEC4AYA5JDCG4ZTY63ARKLZLHFDZK'
@@ -78,7 +78,7 @@ def play_sound(audio_output):
     p.terminate()
 
 def speak(word):
-    tts = gTTS(text=word, lang=output_lang, tld=tld_for_tts)
+    tts = gTTS(text=word, lang=output_lang, )#tld=tld_for_tts)
     tts.save('output_gTTS.mp3')
     play_sound('output_gTTS.mp3')
 
