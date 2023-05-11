@@ -7,6 +7,8 @@ The app then translates this English response back into the user's preferred lan
 
 # Details
 
+Works with 'Japanese(ja)', 'Korean(ko)', 'English(en)' as input languages and output language can be anything that Google TTS supports
+
 In this particular program, users have the option to choose their desired output sound playback device. This allows them to specify where the audio output should be directed, whether it be to a specific set of speakers or headphones.
 
 Furthermore, the program can also utilize VB Cable, which is a virtual audio cable that allows users to route audio output from one program to another. This means that users can use the output of this program as input audio for other programs like Discord or WhatsApp, and the other person will only hear what the program is speaking.
