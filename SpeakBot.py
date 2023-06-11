@@ -9,9 +9,9 @@ from EdgeGPT import Chatbot, ConversationStyle
 
 #for mandarin no tld, for others put "tld=tld_for_tts" besides 'lang=...' in 'tts=gTTS(....'
 #tld is accent
-input_lang = 'ja'
+input_lang = 'en'
 output_lang = 'ja'
-#tld_for_tts = 'us'
+tld_for_tts = 'us'
 
 if input_lang == 'en' :
     wit_api_key = 'RAWZEC4AYA5JDCG4ZTY63ARKLZLHFDZK'
@@ -78,7 +78,7 @@ def play_sound(audio_output):
     p.terminate()
 
 def speak(word):
-    tts = gTTS(text=word, lang=output_lang, )#tld=tld_for_tts)
+    tts = gTTS(text=word, lang=output_lang, tld=tld_for_tts)
     tts.save('output_gTTS.mp3')
     play_sound('output_gTTS.mp3')
 
@@ -99,20 +99,20 @@ async def main():
             
             if input_lang == 'en' :
                 user_input = rec.recognize_wit(audio, key=wit_api_key)
-                print("You : ", user_input)
+                print("You :", user_input)
 
-                if user_input_raw == exit_input:
+                if user_input == exit_input:
                     print('Exiting')
                     break
                     
-                elif user_input_raw == help_input:
+                elif user_input == help_input:
                 
                     help_msg = "help - Shows this help message ////// exit - Exits the program ////// reset - Resets the conversation"
                 
                     print(help_msg)
                     speak(help_msg)
 
-                elif user_input_raw == reset_input:
+                elif user_input == reset_input:
                     await bot.reset()
                     print('reset done')
                     continue
@@ -192,8 +192,9 @@ async def main():
 
                     await bot.close()
 
-        except:
+        except Exception as e:
             print("An error occured...")
+            print(e)
             speak('An error occured')
             
 
