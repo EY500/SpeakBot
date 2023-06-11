@@ -9,8 +9,8 @@ from EdgeGPT import Chatbot, ConversationStyle
 
 #for mandarin no tld, for others put "tld=tld_for_tts" besides 'lang=...' in 'tts=gTTS(....'
 #tld is accent
-input_lang = 'en'
-output_lang = 'ja'
+input_lang = input("The language you wish to speak in (give it as en,ja,ko,...) : ")
+output_lang = input("The language you wish the output to be in (give it as en,ja,ko,...) : ")
 tld_for_tts = 'us'
 
 if input_lang == 'en' :
